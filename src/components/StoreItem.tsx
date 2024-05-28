@@ -42,9 +42,9 @@ const quantity = getItemQuantity(id)
                             < Button className="w-100" onClick={()=>inreasQuantity(id)}> + Add To Cart</Button>
                         ) : (<div className="d-flex align-item-center    flex flex-column" style={{ gap: ".5rem" }}>
                             <div className="d-flex align-items-center justify-content-center" style={{ gap: ".5rem" }}>
-                                <Button onClick={()=>inreasQuantity(id)}>-</Button>
+                                <Button onClick={()=>decreaseQuantity(id)} >-</Button>
                                 <div><span  className="fs-3">{quantity}</span>in Cart</div>
-                                <Button onClick={()=>decreaseQuantity(id)}>+</Button>
+                                <Button  onClick={()=>inreasQuantity(id)} >+</Button>
                             </div><Button variant="danger"  size="sm" onClick={()=>removeQuantity(id)}>remove</Button> </div>)
                         }
                     </div>
