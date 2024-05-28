@@ -38,12 +38,10 @@ export function  ShoppingCartProvider({children}:ShoppingCartProviderProps){
 
     function inreasQuantity(id:number){
        setCartItems( currentItem => {   
-        if(currentItem.find(item => item.id  === id ) === null){
+        if(currentItem.find(item => item.id  === id ) == null){
         
             
-            return [...currentItem,{id,quantity: 1}
-
-            ]
+            return [...currentItem,{id,quantity: 1}]
        }else{
         return currentItem.map(item=>{
             if (item.id===id){
